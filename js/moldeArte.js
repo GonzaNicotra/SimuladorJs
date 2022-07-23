@@ -17,6 +17,10 @@ contenedorProductos.addEventListener('click', e =>(
     addCar(e)
 ))
 
+items.addEventListener('click', e => {
+    btnAccion(e)
+})
+
 const fetchdata = async () => {
     try {
         const resp = await fetch ('js/moldeArte.json')
@@ -103,4 +107,23 @@ const totalCarrito = () => {
         car = {}
         contenidoCarrito()
     })
+}
+
+const btnAccion = e => {
+    if (e.target.classList.contains('btn-success')) {
+        const producto = car[e.target.dataset.id]
+        producto.cantidad++
+        car[e.target.dataset.id] = {...producto}
+        contenidoCarrito()
+    }
+
+    if (e.target.classList.contains('btn-danger')) {
+        const producto = car[e.target.dataset.id]
+        producto.cantidad--
+        if (producto.cantidad === 0) {
+            delete car[e.target.dataset.id]
+        }
+        contenidoCarrito()
+    }
+    e.stopPropagation()
 }
