@@ -75,4 +75,25 @@ const contenidoCarrito = () => {
         fragment.appendChild(clone)
     })
     items.appendChild(fragment)
+
+    totalCarrito ()
+}
+
+const totalCarrito = () => {
+    total.innerHTML = ''
+    if(Object.keys(car).length === 0) {
+        total.innerHTML = `
+        <th scope="row" colspan="5">Carrito vacio</th>
+        `
+    }
+
+    const nCantidad = Object.values(car).reduce((acc, {cantidad}) => acc + cantidad,0)
+    const nPrecio = Object.values(car).reduce((acc, {cantidad, precio}) => acc + cantidad * precio,0)
+
+    templateFooter.querySelectorAll('td')[0].textContent = nCantidad
+    templateFooter.querySelector('span').textContent = nPrecio
+
+    const clone = templateFooter.cloneNode(true)
+    fragment.appendChild(clone)
+    total.appendChild(fragment)
 }
