@@ -1,5 +1,10 @@
 const contenedorProductos = document.getElementById('contenedorProductos')
+const items = document.getElementById('items')
+const total = document.getElementById('total')
 const templateCard = document.getElementById('templateCard').content
+const templateFooter = document.getElementById('templateFooter').content
+const templateCarrito = document.getElementById('templateCarrito').content
+
 const fragment = document.createDocumentFragment()
 
 let car = []
@@ -53,6 +58,21 @@ const setCar = objeto => {
         producto.cantidad = car[producto.id].cantidad + 1
     }
     
-    // car[producto.id] = {...producto}
-    console.log(producto)
+    car[producto.id] = {...producto}
+    contenidoCarrito()
+}
+
+const contenidoCarrito = () => {
+    items.innerHTML = ''
+    Object.values(car).forEach(producto => {
+        templateCarrito.querySelector('th').textContent = producto.id
+        templateCarrito.querySelectorAll('td')[0].textContent = producto.nombre
+        templateCarrito.querySelectorAll('td')[1].textContent = producto.cantidad
+        templateCarrito.querySelector('.btn-success').dataset.id = producto.id
+        templateCarrito.querySelector('.btn-danger').dataset.id = producto.id
+        templateCarrito.querySelector('span').textContent = producto.cantidad * producto.precio
+        const clone = templateCarrito.cloneNode(true)
+        fragment.appendChild(clone)
+    })
+    items.appendChild(fragment)
 }
