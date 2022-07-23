@@ -25,7 +25,7 @@ const contenidoCard = data => {
     templateCard.querySelector('h5').textContent = producto.nombre
     templateCard.querySelector('p').textContent = producto.precio
     templateCard.querySelector('img').setAttribute("src", producto.img)
-    templateCard.querySelector('.btn-primary').dataset.id = producto.Id
+    templateCard.querySelector('.btn-primary').dataset.id = producto.id
     const clone = templateCard.cloneNode(true)
     fragment.appendChild(clone)
    })
@@ -71,6 +71,8 @@ const contenidoCarrito = () => {
     items.appendChild(fragment)
 
     totalCarrito ()
+
+
 }
 
 const totalCarrito = () => {
