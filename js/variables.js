@@ -7,4 +7,3 @@
 
 // let carrito = []
 
-const contenedorProductos = document.getElementById('contenedorProductos')

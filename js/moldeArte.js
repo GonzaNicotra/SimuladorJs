@@ -85,6 +85,7 @@ const totalCarrito = () => {
         total.innerHTML = `
         <th scope="row" colspan="5">Carrito vacio</th>
         `
+        return 
     }
 
     const nCantidad = Object.values(car).reduce((acc, {cantidad}) => acc + cantidad,0)
@@ -96,4 +97,10 @@ const totalCarrito = () => {
     const clone = templateFooter.cloneNode(true)
     fragment.appendChild(clone)
     total.appendChild(fragment)
+
+    const btnVaciar = document.getElementById('vaciarCarrito')
+    btnVaciar.addEventListener('click', () => {
+        car = {}
+        contenidoCarrito()
+    })
 }
