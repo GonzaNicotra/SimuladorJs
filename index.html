@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description"
+        content="En MoldeArte realizamos productos de cerámica utilitarios y de decoración, elaborados de manera artesanal en Mar del Plata.">
+    <meta name="keywords" content="Mar del Plata, cerámica, tazas, mates">
+    <title>Moldearte - Tienda</title>
+    <!-- Bootstrap -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <!-- Css -->
+    <link rel="stylesheet" href="./styles/style.css">
+    <!-- FontAwesome -->
+    <script src="https://kit.fontawesome.com/7d4193cf05.js" crossorigin="anonymous"></script>
+    <!-- Javascript -->
+    <!-- <script defer src="./js/variables.js"></script> -->
+    <script defer src="./js/moldeArte.js"></script>
+</head>
+
+<body>
+    <header>
+        <nav class="fondo">
+            <a class="menu__centro" href="index.html">
+                <img src="./assets/logoMoldearte.png" alt="Moldearte" class="menu__logo">
+            </a>
+            <ul class="nav nav-tabs justify-content-center" id="myTab" role="tablist">
+                <li class="nav-item" role="presentation">
+                    <a class="nav-link menu__boton" data-bs-toggle="tab" data-bs-target="#home-tab-pane" type="button"
+                        role="tab" aria-controls="home-tab-pane" aria-selected="true">Tienda</a>
+                </li>
+                <li class="nav-item" role="presentation">
+                    <a class="nav-link menu__boton" data-bs-toggle="tab" data-bs-target="#profile-tab-pane"
+                        type="button" role="tab" aria-controls="profile-tab-pane" aria-selected="false">Carrito</a>
+                </li>
+            </ul>
+        </nav>
+
+    </header>
+
+
+    <main>
+
+        <div class="tab-content" id="myTabContent">
+            <div class="tab-pane fade show active" id="home-tab-pane" role="tabpanel" aria-labelledby="home-tab"
+                tabindex="1">
+                <!-- Contenedor de Productos -->
+                <h2 class="letra text-center">Productos</h2>
+                <div id="contenedorProductos"></div>
+
+                <template id="templateCard">
+                    <div class="card producto" style="width: 11rem;">
+                        <img src="" class="card-img-top" id="img" alt="...">
+                        <div class="card-body">
+                            <h5></h5>
+                            <p>$</p>
+                            <button href="#" class="btn btn-primary bComprar" data-id="">Añadir al carrito</button>
+                        </div>
+                    </div>
+                </template>
+
+
+            </div>
+            <div class="tab-pane fade" id="profile-tab-pane" role="tabpanel" aria-labelledby="profile-tab" tabindex="2">
+
+                <div>
+                    <div>
+                        <!-- Contenedor de Carrito -->
+                        <h1>Carrito</h1>
+                        <div id="listadoCarrito">
+
+                            <table class="table">
+                                <thead>
+                                    <tr>
+                                        <th scope="col">#</th>
+                                        <th scope="col">Productos</th>
+                                        <th scope="col">Precio</th>
+                                        <th scope="col">Cantidad</th>
+                                        <th scope="col">Acción</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <th scope="row">1</th>
+                                        <td class="table__nombre">Taza Verde</td>
+                                        <td class="table__precio">$500</td>
+                                        <td class="table__cantidad">1</td>
+                                        <td class="table__accion">
+                                            <button class="add btn btn-success">+</button>
+                                            <button class="delete btn btn-danger">-</button>
+                                        </td>
+                                    </tr>
+
+                                </tbody>
+                            </table>
+
+                        </div>
+                    </div>
+                    <div class="fcomp row">
+                        <div class="col">
+                            <p>Total : $</p>
+                        </div>
+                        <div class="col d-flex justify-content-end">
+
+                            <a href="./compra.html" class="btn btn-success" id="letraClara">Finalizar Compra</a>
+                        </div>
+                    </div>
+                </div>
+
+
+            </div>
+
+        </div>
+
+    </main>
+
+    <footer class="container-fluid text-center text-white fondo">
+
+        <div class="container p-4 pb-0">Sigamos conectados!!
+            <section class="mb-4">
+
+                <a class="btn btn-outline-light btn-floating m-1" href="https://www.facebook.com/MoldeArteCeramica/"
+                    role="button"><i class="fab fa-facebook-f"></i></a>
+                <a class="btn btn-outline-light btn-floating m-1" href="https://www.instagram.com/moldearteceramica/"
+                    role="button"><img src="" alt=""><i class="fab fa-instagram"></i></a>
+
+            </section>
+
+        </div>
+        <div>Mar del Plata - Buenos Aires - Argentina</div>
+        <div class="text-center p-3">
+            © Copyright: MoldeArte - 2021. Todos los derechos reservados.</a>
+        </div>
+    </footer>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous">
+    </script>
+</body>
+
+</html>

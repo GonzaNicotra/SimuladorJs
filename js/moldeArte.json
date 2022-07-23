@@ -1,0 +1,75 @@
+[
+    {
+        "nombre":"Taza VyN",
+        "precio": 500, 
+        "Id":123, 
+        "img":"../assets/tazaUno.webp"
+    },
+    {
+        "nombre":"Taza ByR", 
+        "precio":520 , 
+        "Id":456, 
+        "img":"../assets/tazaDos.webp"
+    },
+    {
+        "nombre":"Taza Verde", 
+        "precio":510 , 
+        "Id":789, 
+        "img":"../assets/tazaTres.webp"
+    },
+    {
+        "nombre":"Taza Negra", 
+        "precio":1020 , 
+        "Id":131, 
+        "img":"../assets/tazaCuatro.webp"
+    },
+    {
+        "nombre":"Juego Tazas", 
+        "precio":1400 , 
+        "Id":132, 
+        "img":"../assets/tazaCinco.webp"
+    },
+    {
+        "nombre":"Taza Celeste", 
+        "precio":510 , 
+        "Id":133, 
+        "img":"../assets/tazaSeis.webp"
+    },
+    {
+        "nombre":"Mate Celeste", 
+        "precio":470 , 
+        "Id":121, 
+        "img":"../assets/mateUno.webp"
+    },
+    {
+        "nombre":"Mate Gris", 
+        "precio":460 , 
+        "Id":122, 
+        "img":"../assets/mateDos.webp"
+    },
+    {
+        "nombre":"Mate Rosa", 
+        "precio":470 , 
+        "Id":124, 
+        "img":"../assets/mateTres.webp"
+    },
+    {
+        "nombre":"Mate Verde", 
+        "precio":470 , 
+        "Id":126, 
+        "img":"../assets/mateCuatro.webp"
+    },
+    {
+        "nombre":"Mate Negro", 
+        "precio":470 , 
+        "Id":127, 
+        "img":"../assets/mateCinco.webp"
+    },
+    {
+        "nombre":"Mate NyB", 
+        "precio":470 , 
+        "Id":128, 
+        "img":"../assets/mateSeis.webp"
+    }
+
+]
