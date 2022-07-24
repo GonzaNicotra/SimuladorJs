@@ -21,15 +21,15 @@ const fetchdata = async () => {
 }
 
 const contenidoCard = data => {
-   data.forEach(producto => {
-    templateCard.querySelector('h5').textContent = producto.nombre
+    data.forEach(producto => {
+        templateCard.querySelector('h5').textContent = producto.nombre
     templateCard.querySelector('p').textContent = producto.precio
     templateCard.querySelector('img').setAttribute("src", producto.img)
     templateCard.querySelector('.btn-primary').dataset.id = producto.id
     const clone = templateCard.cloneNode(true)
     fragment.appendChild(clone)
-   })
-   contenedorProductos.appendChild(fragment)
+})
+contenedorProductos.appendChild(fragment)
 }
 
 const addCar = e => {
@@ -69,10 +69,10 @@ const contenidoCarrito = () => {
         fragment.appendChild(clone)
     })
     items.appendChild(fragment)
-
+    
     totalCarrito ()
-
-
+    
+    
 }
 
 const totalCarrito = () => {
@@ -83,17 +83,17 @@ const totalCarrito = () => {
         `
         return 
     }
-
+    
     const nCantidad = Object.values(car).reduce((acc, {cantidad}) => acc + cantidad,0)
     const nPrecio = Object.values(car).reduce((acc, {cantidad, precio}) => acc + cantidad * precio,0)
-
+    
     templateFooter.querySelectorAll('td')[0].textContent = nCantidad
     templateFooter.querySelector('span').textContent = nPrecio
-
+    
     const clone = templateFooter.cloneNode(true)
     fragment.appendChild(clone)
     total.appendChild(fragment)
-
+    
     const btnVaciar = document.getElementById('vaciarCarrito')
     btnVaciar.addEventListener('click', () => {
         car = {}
@@ -110,7 +110,7 @@ const btnAccion = e => {
         car[e.target.dataset.id] = {...producto}
         contenidoCarrito()
     }
-
+    
     if (e.target.classList.contains('btn-danger')) {
         const producto = car[e.target.dataset.id]
         producto.cantidad--
